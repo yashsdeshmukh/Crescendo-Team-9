@@ -35,8 +35,11 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation project(':simplesearchview')
+    implementation 'com.google.firebase:firebase-database:19.7.0'
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.3.0-alpha04'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha04'
+
 }
