@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ViewRecipe">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -20,9 +19,8 @@
         app:layout_constraintStart_toEndOf="@+id/toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/viewRecipe">
+        android:id="@+id/viewRecipe"
+        android:layout_marginBottom="75dp">
     </ListView>
-
-
 
 </RelativeLayout>

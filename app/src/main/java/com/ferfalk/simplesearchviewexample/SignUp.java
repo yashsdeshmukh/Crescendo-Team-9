@@ -97,7 +97,7 @@ public class SignUp extends AppCompatActivity {
                                     Log.d(TAG, "onFailure: "+e.toString());
                                 }
                             });
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), BMI.class));
                         }else{
                             Toast.makeText(SignUp.this, "Error!"+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
