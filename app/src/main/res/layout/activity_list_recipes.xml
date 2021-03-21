@@ -6,13 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ListRecipes">
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/AppTheme.AppBarOverlay"
+            app:subtitle="..click to get the entire recipe"
+            app:title="CHOOSE YOUR RECIPE"/>
+
         <ListView
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/listView">
-
-
-
 
         </ListView>
 =

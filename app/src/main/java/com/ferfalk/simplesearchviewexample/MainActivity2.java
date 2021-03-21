@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
@@ -17,6 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.json.JSONStringer;
 
 import java.io.Serializable;
@@ -43,10 +46,13 @@ public class MainActivity2 extends AppCompatActivity {
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
+
             Log.d("War","size");
             if(snapshot.exists()){
+
                 List<DataSnapshot> list = new ArrayList<>();
                 List<String> ingrid = new  ArrayList<>();
+                Log.d("Ingrid", "yeh "+ingrid);
                 ingrid.add("milk");
                 ingrid.add("chicken");
                 for(DataSnapshot ds : snapshot.getChildren()) {
@@ -62,7 +68,12 @@ public class MainActivity2 extends AppCompatActivity {
                     Log.d("War","size"+list.get(i));
                 }
 
+                Intent intent = new Intent(MainActivity2.this, ListRecipes.class);
+                intent.putExtra("key", (Serializable) list);
+                startActivity(intent);
             }
+
+
 
         }
 

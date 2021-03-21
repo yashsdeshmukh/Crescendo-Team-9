@@ -23,8 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:popupTheme="@style/AppTheme.PopupOverlay"
-                app:subtitle="@string/app_subtitle"
-                app:title="Example" />
+                app:subtitle="..we have no branches"
+                app:title="FOOD KHAZANA" />
 
             <com.ferfalk.simplesearchview.SimpleSearchView
                 android:id="@+id/searchView"
@@ -34,6 +34,9 @@
                 app:type="card"
                 app:voiceSearch="true"
                 tools:visibility="visible" />
+
+
+
         </FrameLayout>
 
 
@@ -48,29 +51,74 @@
                 android:id="@+id/tabItem1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_1" />
+                android:text="INGRIDENTS" >
+
+            </com.google.android.material.tabs.TabItem>
 
             <com.google.android.material.tabs.TabItem
+
+
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/tab_text_2" />
+                android:text="BASKET">
 
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/tab_text_3" />
+            </com.google.android.material.tabs.TabItem>
+
 
         </com.google.android.material.tabs.TabLayout>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/container"
+    <!--    <androidx.viewpager.widget.ViewPager-->
+    <!--        android:id="@+id/container"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_marginTop="100dp">
+
+        <ListView
+            android:id="@+id/selected_branch"
+            android:layout_width="411dp"
+            android:layout_height="508dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.024" />
+
+        <Button
+            android:id="@+id/Done"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:text="FIND RECIPES"
+            android:textSize="20dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.853"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/selected_branch" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ListView
+        android:id="@+id/branch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"/>
+
+
+
+    <!--    </androidx.viewpager.widget.ViewPager>-->
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
